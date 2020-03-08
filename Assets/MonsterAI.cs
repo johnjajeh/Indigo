@@ -15,11 +15,11 @@ public class MonsterAI : MonoBehaviour {
     public GameObject goMovingWP;
 
     public enum AIState {
-		chasingPlayer,
+		frozen, // let it go
+        chasingPlayer,
 		attackingPlayer
 	};
 
-    public bool recentlyAttacked; 
     public double timeElapsed;
 
     // private void setNextWaypoint() {
@@ -58,7 +58,7 @@ public class MonsterAI : MonoBehaviour {
         anim = GetComponent<Animator>();
         velocity = gameObject.AddComponent<VelocityReporter>();
         aiState = AIState.chasingPlayer;
-        recentlyAttacked = false;
+        
         timeElapsed = 0;
         // currWaypoint = -1;
         // setNextWaypoint();
@@ -69,39 +69,32 @@ public class MonsterAI : MonoBehaviour {
 
     	float distance = getDistance().magnitude;
 
-        // 
-        timeElapsed += Time.deltaTime;
+        switch(aiState) {
+            case AIState.frozen:
+                timeElapsed += Time.deltaTime;
 
-        if (timeElapsed >= 10 && recentlyAttacked) {
-            timeElapsed = 0;
-            recentlyAttacked = false;
-        }
+                Debug.Log("I'm frozen!" + Time.deltaTime);
 
-
-        if (!recentlyAttacked) {
-
-            switch(aiState) {
+                if (timeElapsed >= 5) {
+                    aiState = AIState.chasingPlayer;
+                }
+                break;        
             case AIState.chasingPlayer:
                 setMovingWaypoint();
                 if (!nM.pathPending && nM.remainingDistance - nM.stoppingDistance <= 3) {
                     // setNextWaypoint();   
-                    // aiState = AIState.attackingPlayer;
+                    aiState = AIState.attackingPlayer;
                     // anim.SetFloat("vely", nM.velocity.magnitude / nM.speed);
                 }
 
                 break;        
             case AIState.attackingPlayer:
-                // setMovingWaypoint();
-                // anim.SetFloat("vely", nM.velocity.magnitude / nM.speed);
-
-                // if (nM.remainingDistance - nM.stoppingDistance <= 0) {
-                //     // currWaypoint = -1;
-                //     aiState = AIState.chasingPlayer;
-                //     anim.SetFloat("vely", nM.velocity.magnitude / nM.speed);
-                // }
+                // to do: implement actual attack
+                timeElapsed = 0;
+                aiState = AIState.frozen;
 
                 break;
-            }    
-        }
+        }    
+    
     }
 }
