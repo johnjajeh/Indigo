@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class MonsterAI : MonoBehaviour {
 
-    public BasicBehaviour ethanScript;
-
+    public PlayerStats PlayerStatsObj = null;
     private Animator anim;
     UnityEngine.AI.NavMeshAgent nM;
     public GameObject[] waypoints;
@@ -48,8 +47,7 @@ public class MonsterAI : MonoBehaviour {
         velocity = gameObject.AddComponent<VelocityReporter>();
         aiState = AIState.chasingPlayer;
 
-        ethanScript = goMovingWP.GetComponent<BasicBehaviour>();
-        
+
         timeElapsed = 0;
     }
 
@@ -78,7 +76,10 @@ public class MonsterAI : MonoBehaviour {
             case AIState.attackingPlayer:
                 // to do: implement actual attack
 
-                ethanScript.reduceHealth();
+                // ethanScript.reduceHealth();
+                if (PlayerStatsObj != null) {
+                    PlayerStatsObj.TakeDamage((float) 1);
+                }
                 timeElapsed = 0;
                 aiState = AIState.frozen;
 

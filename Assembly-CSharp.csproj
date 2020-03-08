@@ -45,11 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\FlyBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
+     <Compile Include="Assets\AimBehaviour.cs" />
      <Compile Include="Assets\AllSkyFree\AllSkyFree_Menu.cs" />
      <Compile Include="Assets\HealthHeartSystem\Scripts\HealthBarController.cs" />
      <Compile Include="Assets\HealthHeartSystem\Scripts\HealthBarHUDTester.cs" />
@@ -61,8 +57,13 @@
      <Compile Include="Assets\Scripts\GamerQuitter.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
+     <Compile Include="Assets\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
      <Compile Include="Assets\Scripts\MonsterAI.cs" />
      <Compile Include="Assets\Scripts\PauseMenuToggle.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\BasicBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\FlyBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\MoveBehaviour.cs" />
      <Compile Include="Assets\Scripts\QuitToStartScreen.cs" />
      <Compile Include="Assets\Scripts\ResumeGame.cs" />
      <Compile Include="Assets\Scripts\SceneStart.cs" />
