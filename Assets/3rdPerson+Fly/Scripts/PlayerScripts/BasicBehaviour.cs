@@ -28,6 +28,8 @@ public class BasicBehaviour : MonoBehaviour
 	private int groundedBool;                             // Animator variable related to whether or not the player is on the ground.
 	private Vector3 colExtents;                           // Collider extents for ground test. 
 
+	private int health;
+
 	// Get current horizontal and vertical axes.
 	public float GetH { get { return h; } }
 	public float GetV { get { return v; } }
@@ -54,10 +56,16 @@ public class BasicBehaviour : MonoBehaviour
 		vFloat = Animator.StringToHash("V");
 		camScript = playerCamera.GetComponent<ThirdPersonOrbitCamBasic> ();
 		rBody = GetComponent<Rigidbody> ();
+		health = 3;
 
 		// Grounded verification variables.
 		groundedBool = Animator.StringToHash("Grounded");
 		colExtents = GetComponent<Collider>().bounds.extents;
+	}
+
+	public void reduceHealth() {
+		--health;
+		Debug.Log("Health is " + health);
 	}
 
 	void Update()

@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class MonsterAI : MonoBehaviour {
 
+    public BasicBehaviour ethanScript;
+
     private Animator anim;
     UnityEngine.AI.NavMeshAgent nM;
     public GameObject[] waypoints;
@@ -22,25 +24,12 @@ public class MonsterAI : MonoBehaviour {
 
     public double timeElapsed;
 
-    // private void setNextWaypoint() {
-    //     if (waypoints.Length == 0) {
-    //         Debug.Log("waypoints has length zero");
-    //     } else {
-    //     	if (currWaypoint + 1 == 5) {
-    //     		aiState = AIState.movingWP;
-    //     	}
-
-    //         currWaypoint = (currWaypoint + 1) % waypoints.Length;
-    //         nM.SetDestination(waypoints[currWaypoint].transform.position);
-    //     }
-    // }
-
     private void setMovingWaypoint() {
-        Debug.Log("Moving toward waypoint!");
+        // Debug.Log("Moving toward waypoint!");
 		float distance0 = (goMovingWP.transform.position - nM.transform.position).magnitude;
     	float lookAheadT = distance0 / nM.speed;
         Vector3 target = (goMovingWP.transform.position + (lookAheadT * velocity.Velocity));
-        Debug.Log(target);
+        // Debug.Log(target);
     	nM.SetDestination(target);
     }
 
@@ -58,10 +47,10 @@ public class MonsterAI : MonoBehaviour {
         anim = GetComponent<Animator>();
         velocity = gameObject.AddComponent<VelocityReporter>();
         aiState = AIState.chasingPlayer;
+
+        ethanScript = goMovingWP.GetComponent<BasicBehaviour>();
         
         timeElapsed = 0;
-        // currWaypoint = -1;
-        // setNextWaypoint();
     }
 
     // Update is called once per frame
@@ -72,8 +61,6 @@ public class MonsterAI : MonoBehaviour {
         switch(aiState) {
             case AIState.frozen:
                 timeElapsed += Time.deltaTime;
-
-                Debug.Log("I'm frozen!" + Time.deltaTime);
 
                 if (timeElapsed >= 5) {
                     aiState = AIState.chasingPlayer;
@@ -90,6 +77,8 @@ public class MonsterAI : MonoBehaviour {
                 break;        
             case AIState.attackingPlayer:
                 // to do: implement actual attack
+
+                ethanScript.reduceHealth();
                 timeElapsed = 0;
                 aiState = AIState.frozen;
 
