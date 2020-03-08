@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{90DE79F3-2BBA-7F30-1BDC-E359F39554C2}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/QuitToStartScreen.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PauseMenuToggle.cs" Line="18" Column="43" />
+      <File FileName="Assets/Scripts/ResumeGame.cs" Line="22" Column="27" />
+      <File FileName="Assets/Scripts/QuitToStartScreen.cs" Line="4" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
