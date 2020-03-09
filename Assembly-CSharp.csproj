@@ -72,11 +72,13 @@
     <Compile Include="Assets\Scripts\GameStarter.cs" />
     <Compile Include="Assets\Scripts\GamerQuitter.cs" />
     <Compile Include="Assets\Scripts\PauseMenuToggle.cs" />
+    <Compile Include="Assets\Scripts\PlayGameAgain.cs" />
     <Compile Include="Assets\Scripts\QuitToStartScreen.cs" />
     <Compile Include="Assets\Scripts\ResumeGame.cs" />
     <Compile Include="Assets\Scripts\SceneStart.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCameraController.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCharacterController.cs" />
+    <Compile Include="Assets\Scripts\WinMenuToggle.cs" />
     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\AllSkyFree\AllSkyFree_Readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
@@ -93,6 +95,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/masondominey/cs4455/Indigo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>/Users/masondominey/cs4455/Indigo/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>/Users/masondominey/cs4455/Indigo/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.1f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
