@@ -16,6 +16,7 @@ public class WinMenuToggle : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(WinMarker.winEntered);
         if (WinMarker.winEntered) {
             Debug.Log("win menu toggle - win entered");
             if(canvasGroup.interactable)
