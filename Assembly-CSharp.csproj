@@ -51,7 +51,6 @@
      <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\FlyBehaviour.cs" />
      <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
      <Compile Include="Assets\AimBehaviour.cs" />
-     <Compile Include="Assets\AllSkyFree\AllSkyFree_Menu.cs" />
      <Compile Include="Assets\Compass\Scripts\CollectableCompass.cs" />
      <Compile Include="Assets\Compass\Scripts\CompassActivator.cs" />
      <Compile Include="Assets\Compass\Scripts\CompassCollector.cs" />

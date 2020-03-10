@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     private float maxHealth;
     [SerializeField]
-    private float maxTotalHealth;
+    private float maxTotalHealth = 0;
 
     public float Health { get { return health; } }
     public float MaxHealth { get { return maxHealth; } }
