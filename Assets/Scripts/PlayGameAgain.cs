@@ -8,6 +8,6 @@ public class PlayGameAgain : MonoBehaviour
     // transition to main game scene
     public void RestartGame()
     {
-        SceneManager.LoadScene("new3rdperson");
+        SceneManager.LoadScene("boundingWalls");
     }
 }
