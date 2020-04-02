@@ -35,6 +35,7 @@ public class MonsterAI : MonoBehaviour {
         nM = GetComponent<UnityEngine.AI.NavMeshAgent>();
         nM.stoppingDistance = 1.0f;
         anim = GetComponent<Animator>();
+        anim.SetBool("Patrolling", true);
         velocity = gameObject.AddComponent<VelocityReporter>();
         aiState = AIState.patrolling;
 
@@ -50,27 +51,37 @@ public class MonsterAI : MonoBehaviour {
 
         switch(aiState) {
             case AIState.frozen:
+                Debug.Log("Frozen!");
                 timeElapsed += Time.deltaTime;
 
                 if (timeElapsed >= 5) {
                     if (amICloseEnoughToEthan()) {
+                        anim.SetBool("Frozen", false);
+                        anim.SetBool("Chasing", true);
                         aiState = AIState.chasingPlayer;
                     } else {
+                        anim.SetBool("Frozen", false);
+                        anim.SetBool("Patrolling", true);
                         aiState = AIState.patrolling;
                         setNextWaypoint();
                     }
                 }
                 break;        
             case AIState.chasingPlayer:
+                Debug.Log("Chasing player!");
+                //TODO if the player is too far away, go back to patrolling
                 setMovingWaypoint();
                 if (!nM.pathPending && nM.remainingDistance - nM.stoppingDistance <= 2) {
                     // setNextWaypoint();   
+                    anim.SetBool("Chasing", false);
+                    anim.SetBool("Attacking", true);
                     aiState = AIState.attackingPlayer;
                     // anim.SetFloat("vely", nM.velocity.magnitude / nM.speed);
                 }
 
                 break;        
             case AIState.attackingPlayer:
+                Debug.Log("Attacking player!");
                 // to do: implement actual attack
 
                 // ethanScript.reduceHealth();
@@ -78,6 +89,8 @@ public class MonsterAI : MonoBehaviour {
                     PlayerStatsObj.TakeDamage((float) 1);
                 }
                 timeElapsed = 0;
+                anim.SetBool("Attacking", false);
+                anim.SetBool("Frozen", true);
                 aiState = AIState.frozen;
 
                 break;
@@ -85,8 +98,9 @@ public class MonsterAI : MonoBehaviour {
                 Debug.Log("I am patrolling to waypoint " + currWaypoint);
                 if (!nM.pathPending && nM.remainingDistance - nM.stoppingDistance <= 0.2) {
                     if (amICloseEnoughToEthan()) {
-                        Debug.Log("I am close enough to Ethan!");
                         setMovingWaypoint();
+                        anim.SetBool("Patrolling", false);
+                        anim.SetBool("Chasing", true);
                         aiState = AIState.chasingPlayer;
                     } else {
                         setNextWaypoint();
@@ -105,6 +119,7 @@ public class MonsterAI : MonoBehaviour {
     private void setNextWaypoint() {
         currWaypoint = (currWaypoint + 1) % waypoints.Length;
         nM.SetDestination(waypoints[currWaypoint].transform.position);
+        nM.updateRotation = true;
     }
 
     private void setMovingWaypoint() {
