@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/startScreen.unity
+    guid: b9929ec8a7c4947669fb2fbd7a891fdc
+  - enabled: 1
+    path: Assets/Scenes/pickUpObjects.unity
+    guid: b17446da5a69264408dc9feab83ac445
   m_configObjects: {}
