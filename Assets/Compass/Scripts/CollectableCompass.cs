@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CollectableCompass : MonoBehaviour
 {
-    public static bool compassCollected = false;
+    // public static bool compassCollected = false;
+    public bool compassCollected = false;
+
 
     void OnTriggerEnter(Collider c) 
     {
@@ -14,6 +16,7 @@ public class CollectableCompass : MonoBehaviour
             CompassCollector cc = c.attachedRigidbody.gameObject.GetComponent<CompassCollector>();
             if (cc) 
             {
+                cc.hasCompass = true;
                 compassCollected = true;
                 // Destroy collected compass
                 Destroy(this.transform.parent.gameObject);
