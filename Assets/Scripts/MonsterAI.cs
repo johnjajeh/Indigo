@@ -14,7 +14,11 @@ public class MonsterAI : MonoBehaviour {
 	public AIState aiState;
 	public VelocityReporter velocity;
     public GameObject goMovingWP;
-    public double cutoffDistanceToMovingWaypoint = 2.0;
+    public double cutoffDistanceToMovingWaypoint = 8;
+
+    public double cutoffDistanceForAttacking = 2;
+
+    public double cutoffDistanceForChasing = 16;
 
     private int currWaypoint;
 
@@ -51,11 +55,11 @@ public class MonsterAI : MonoBehaviour {
 
         switch(aiState) {
             case AIState.frozen:
-                Debug.Log("Frozen!");
+                // Debug.Log("Frozen!");
                 timeElapsed += Time.deltaTime;
 
                 if (timeElapsed >= 5) {
-                    if (amICloseEnoughToEthan()) {
+                    if (amICloseEnoughToEthanToChase()) {
                         anim.SetBool("Frozen", false);
                         anim.SetBool("Chasing", true);
                         aiState = AIState.chasingPlayer;
@@ -68,10 +72,17 @@ public class MonsterAI : MonoBehaviour {
                 }
                 break;        
             case AIState.chasingPlayer:
-                Debug.Log("Chasing player!");
+                // Debug.Log("Chasing player!");
                 //TODO if the player is too far away, go back to patrolling
+                if (amITooFarAwayToChase()) {
+                    anim.SetBool("Chasing", false);
+                    anim.SetBool("Patrolling", true);
+                    aiState = AIState.patrolling;
+                    setNextWaypoint();
+                }
                 setMovingWaypoint();
-                if (!nM.pathPending && nM.remainingDistance - nM.stoppingDistance <= 2) {
+                nM.speed = 3.0f;
+                if (amICloseEnoughToEthanToAttack()) {
                     // setNextWaypoint();   
                     anim.SetBool("Chasing", false);
                     anim.SetBool("Attacking", true);
@@ -81,7 +92,7 @@ public class MonsterAI : MonoBehaviour {
 
                 break;        
             case AIState.attackingPlayer:
-                Debug.Log("Attacking player!");
+                // Debug.Log("Attacking player!");
                 // to do: implement actual attack
                 
                 // ethanScript.reduceHealth();
@@ -96,9 +107,10 @@ public class MonsterAI : MonoBehaviour {
 
                 break;
             case AIState.patrolling:
-                Debug.Log("I am patrolling to waypoint " + currWaypoint);
+                // Debug.Log("I am patrolling to waypoint " + currWaypoint);
+                nM.speed = 2.0f;
                 if (!nM.pathPending && nM.remainingDistance - nM.stoppingDistance <= 0.2) {
-                    if (amICloseEnoughToEthan()) {
+                    if (amICloseEnoughToEthanToChase()) {
                         setMovingWaypoint();
                         anim.SetBool("Patrolling", false);
                         anim.SetBool("Chasing", true);
@@ -112,10 +124,21 @@ public class MonsterAI : MonoBehaviour {
     
     }
 
-    private bool amICloseEnoughToEthan() {
+    private bool amICloseEnoughToEthanToChase() {
         float distance = Mathf.Abs((nM.transform.position - goMovingWP.transform.position).magnitude);
         return  distance < cutoffDistanceToMovingWaypoint;
     }
+
+    private bool amICloseEnoughToEthanToAttack() {
+        float distance = Mathf.Abs((nM.transform.position - goMovingWP.transform.position).magnitude);
+        return  distance < cutoffDistanceForAttacking;
+    }
+
+    private bool amITooFarAwayToChase() {
+                float distance = Mathf.Abs((nM.transform.position - goMovingWP.transform.position).magnitude);
+        return  distance < cutoffDistanceForChasing;
+    }
+
 
     private void setNextWaypoint() {
         currWaypoint = (currWaypoint + 1) % waypoints.Length;
@@ -125,11 +148,11 @@ public class MonsterAI : MonoBehaviour {
 
     private void setMovingWaypoint() {
         // Debug.Log("Moving toward waypoint!");
-        float distance0 = (goMovingWP.transform.position - nM.transform.position).magnitude;
-        float lookAheadT = distance0 / nM.speed;
-        Vector3 target = (goMovingWP.transform.position + (lookAheadT * velocity.Velocity));
+        // float distance0 = (goMovingWP.transform.position - nM.transform.position).magnitude;
+        // float lookAheadT = distance0 / nM.speed;
+        // Vector3 target = (goMovingWP.transform.position + (lookAheadT * velocity.Velocity));
         // Debug.Log(target);
-        nM.SetDestination(target);
+        nM.SetDestination(goMovingWP.transform.position);
     }
 
     private Vector3 getDistance() {
