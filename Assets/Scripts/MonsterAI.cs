@@ -83,11 +83,12 @@ public class MonsterAI : MonoBehaviour {
             case AIState.attackingPlayer:
                 Debug.Log("Attacking player!");
                 // to do: implement actual attack
-
+                
                 // ethanScript.reduceHealth();
                 if (PlayerStatsObj != null) {
                     PlayerStatsObj.TakeDamage((float) 1);
                 }
+                if (anim)
                 timeElapsed = 0;
                 anim.SetBool("Attacking", false);
                 anim.SetBool("Frozen", true);
