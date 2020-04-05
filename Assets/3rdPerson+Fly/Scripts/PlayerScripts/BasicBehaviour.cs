@@ -86,6 +86,13 @@ public class BasicBehaviour : MonoBehaviour
 		}
 		// Set the grounded test on the Animator Controller.
 		anim.SetBool(groundedBool, IsGrounded());
+
+		//added by Jonathan Najjar
+		if(Input.GetAxisRaw("Aim") != 0) {
+		    	if(Input.GetButtonDown("Throw")){ //&& Can Trhow
+		    		anim.SetTrigger("Throw");
+		    	}
+    	}
 	}
 
 	// Call the FixedUpdate functions of the active or overriding behaviours.
