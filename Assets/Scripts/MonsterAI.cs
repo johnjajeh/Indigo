@@ -73,7 +73,6 @@ public class MonsterAI : MonoBehaviour {
                 break;        
             case AIState.chasingPlayer:
                 // Debug.Log("Chasing player!");
-                //TODO if the player is too far away, go back to patrolling
                 if (amITooFarAwayToChase()) {
                     anim.SetBool("Chasing", false);
                     anim.SetBool("Patrolling", true);
@@ -86,6 +85,10 @@ public class MonsterAI : MonoBehaviour {
                     // setNextWaypoint();   
                     anim.SetBool("Chasing", false);
                     anim.SetBool("Attacking", true);
+
+                    Debug.Log("Delaying");
+                    new WaitForSeconds(5);
+
                     aiState = AIState.attackingPlayer;
                     // anim.SetFloat("vely", nM.velocity.magnitude / nM.speed);
                 }
@@ -94,28 +97,34 @@ public class MonsterAI : MonoBehaviour {
             case AIState.attackingPlayer:
                 // Debug.Log("Attacking player!");
                 // to do: implement actual attack
+
                 
                 // ethanScript.reduceHealth();
                 if (PlayerStatsObj != null) {
                     PlayerStatsObj.TakeDamage((float) 1);
                 }
-                if (anim)
+
                 timeElapsed = 0;
                 anim.SetBool("Attacking", false);
                 anim.SetBool("Frozen", true);
                 aiState = AIState.frozen;
 
+
                 break;
             case AIState.patrolling:
                 // Debug.Log("I am patrolling to waypoint " + currWaypoint);
                 nM.speed = 2.0f;
+                
+                //If the enemy is at a waypoint
                 if (!nM.pathPending && nM.remainingDistance - nM.stoppingDistance <= 0.2) {
+                    //Check if the enemy if close enough to chase the player
                     if (amICloseEnoughToEthanToChase()) {
                         setMovingWaypoint();
+                        Debug.Log("I should transition states here!");
                         anim.SetBool("Patrolling", false);
                         anim.SetBool("Chasing", true);
                         aiState = AIState.chasingPlayer;
-                    } else {
+                    } else { //Too far away, keep patrolling
                         setNextWaypoint();
                     }
                 }
