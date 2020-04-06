@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\VelocityReporter.cs" />
      <Compile Include="Assets\Scripts\WinMarker.cs" />
      <Compile Include="Assets\Scripts\WinMenuToggle.cs" />
+     <Compile Include="Assets\TextAppear.cs" />
      <Compile Include="Assets\Throwing\scripts\RockController.cs" />
      <Compile Include="Assets\Throwing\scripts\RockMove.cs" />
      <Compile Include="Assets\Throwing\scripts\RockPickup.cs" />
