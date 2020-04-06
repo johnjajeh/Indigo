@@ -82,12 +82,15 @@
     <Compile Include="Assets\Scripts\GamerQuitter.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\HealthSystem.cs" />
+    <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\MonsterAI.cs" />
+    <Compile Include="Assets\Scripts\OpenGate.cs" />
     <Compile Include="Assets\Scripts\PauseMenuToggle.cs" />
     <Compile Include="Assets\Scripts\PlayGameAgain.cs" />
     <Compile Include="Assets\Scripts\QuitToStartScreen.cs" />
     <Compile Include="Assets\Scripts\ResumeGame.cs" />
     <Compile Include="Assets\Scripts\SceneStart.cs" />
+    <Compile Include="Assets\Scripts\SwitchToHouseScene.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCameraController.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCharacterController.cs" />
     <Compile Include="Assets\Scripts\VelocityReporter.cs" />
