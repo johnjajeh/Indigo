@@ -7,7 +7,7 @@ public class CompassCollector : MonoBehaviour
     // Allows attached object to collect a compass
     public bool hasCompass = false;
 
-    public void ReceiveRock() {
-        hasCompass = true;
-    }
+    // public void ReceiveRock() {
+    //     hasCompass = true;
+    // }
 }

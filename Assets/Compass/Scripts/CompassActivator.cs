@@ -6,6 +6,7 @@ public class CompassActivator : MonoBehaviour
 {
     public GameObject compass;          // Compass prefab
     private Animator compassAnim;       // Compass animation controller
+   
     void OnTriggerEnter(Collider c)
     {   
         // Check if compass has not been collected
