@@ -7,6 +7,7 @@ public class RockMove : MonoBehaviour
 	public float fireRate;
 	//public Transform playerCam;
 	private GameObject objCamera;
+	private GameObject firepoint;
 	public float throwForce;
 	private Rigidbody rb;
 
@@ -14,6 +15,7 @@ public class RockMove : MonoBehaviour
     void Start()
     {
     	objCamera = (GameObject) GameObject.FindWithTag("MainCamera");
+    	firepoint = (GameObject) GameObject.FindWithTag("Firepoint");
     	rb = GetComponent<Rigidbody>();
         
     }
@@ -23,7 +25,9 @@ public class RockMove : MonoBehaviour
     {
     	if (throwForce != 0){
     		//transform.position += transform.forward * (speed * Time.deltaTime);
-    		rb.AddForce(rb.transform.forward * throwForce);
+    		// var controlDirection : Vector3 = Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+    		// var actualDirection = objCamera.TransformDirection(controlDirection);
+    		rb.AddForce(firepoint.transform.forward * throwForce); //objCamera.transform.forward
     	} else {
     		Debug.Log("No Speed");
     	}
@@ -32,7 +36,13 @@ public class RockMove : MonoBehaviour
 
     void OnCollisionEnter() {
     	Debug.Log("destroyed rock");
+    	rb.velocity = Vector3.zero;
+    	rb.angularVelocity = Vector3.zero;
     	rb.drag = 10;
+    	rb.constraints &= ~RigidbodyConstraints.FreezePositionZ;
+    	rb.constraints &= ~RigidbodyConstraints.FreezePositionX;
+    	rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+
     	Destroy(gameObject, 2.0f);
     }
 }

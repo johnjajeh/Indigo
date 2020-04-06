@@ -856,7 +856,7 @@ GameObject:
   - component: {fileID: 415201894}
   m_Layer: 0
   m_Name: Firepoint
-  m_TagString: Untagged
+  m_TagString: Firepoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -869,7 +869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 415201893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.652, z: 0.502}
+  m_LocalPosition: {x: 0.105, y: 0.815, z: 2.223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 904460855}
@@ -895,7 +895,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
@@ -1252,6 +1252,12 @@ PrefabInstance:
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 415201893}
+    - target: {fileID: 4487352976111953139, guid: 92c71d6a614a9094e9222224a020cc22,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 3220613518226789498, guid: 4e2a3482a580c194e8b7dd7eade2d960,
+        type: 3}
     - target: {fileID: 4487352976111953148, guid: 92c71d6a614a9094e9222224a020cc22,
         type: 3}
       propertyPath: m_Name
@@ -1799,14 +1805,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904460851}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.83438104, z: 0.017440349}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 2.03, z: 0.017440349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 415201894}
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!1 &919430467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55, type: 3}
       propertyPath: m_LocalRotation.x
