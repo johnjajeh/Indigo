@@ -50,11 +50,14 @@ public class MonsterAI : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+    	float distance = getDistance().magnitude;
+
         switch(aiState) {
             case AIState.frozen:
                 // Debug.Log("Frozen!");
                 timeElapsed += Time.deltaTime;
-                if (timeElapsed >= 5) {
+                if (timeElapsed >= 3) {
                     if (amICloseEnoughToEthanToChase()) {
                         anim.SetBool("Frozen", false);
                         anim.SetBool("Chasing", true);
