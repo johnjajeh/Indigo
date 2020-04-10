@@ -25,11 +25,19 @@ public class TargetMarkerController : MonoBehaviour
 
     void Update() 
     {
-        if (cc.hasCompass == true) 
+        if (cc.hasCompass == true || hud.enabled == true) 
         {
+            // Start marker when player has compass
+            if (cc.hasCompass == true) {
+                markerStartTime = Time.time;
+                // Debug.Log("marker start time: " + markerStartTime);
+            }
+
             // Enable HUD when player has a compass
             if (hud.enabled == false) {
                 hud.enabled = true;
+                // Reset player compass status
+                cc.hasCompass = false;
             }
 
             // Debug.Log("has compass: " + cc.hasCompass);
