@@ -637,22 +637,22 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0135cef532fc0a84a9d056a164f9c1bc,
         type: 3}
@@ -1038,7 +1038,7 @@ PrefabInstance:
     - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
         type: 3}
       propertyPath: maxMarkerTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6859921543798003590, guid: efae674c2c6c5ed448c54c3f01bcb22a,
         type: 3}
@@ -2272,9 +2272,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.26
-  m_Height: 1.6
+  m_Height: 1.75
   m_Direction: 1
-  m_Center: {x: 0, y: 0.79, z: 0}
+  m_Center: {x: 0, y: 0.83, z: 0}
 --- !u!4 &1414289281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400168, guid: b235179bd2a63d1468dd430670338c55,
