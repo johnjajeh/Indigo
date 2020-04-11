@@ -1164,8 +1164,7 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 3220613518226789498, guid: 4e2a3482a580c194e8b7dd7eade2d960,
-        type: 3}
+      objectReference: {fileID: 117232, guid: d2f192c371f0f7f408ef6d3471aa68ca, type: 3}
     - target: {fileID: 4487352976111953148, guid: 92c71d6a614a9094e9222224a020cc22,
         type: 3}
       propertyPath: m_Name
