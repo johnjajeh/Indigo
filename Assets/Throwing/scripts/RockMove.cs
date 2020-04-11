@@ -43,6 +43,6 @@ public class RockMove : MonoBehaviour
     	rb.constraints &= ~RigidbodyConstraints.FreezePositionX;
     	rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
 
-    	Destroy(gameObject, 2.0f);
+    	Destroy(gameObject);
     }
 }
