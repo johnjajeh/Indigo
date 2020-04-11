@@ -35,7 +35,7 @@ public class RockMove : MonoBehaviour
     }
 
     void OnCollisionEnter() {
-    	Debug.Log("destroyed rock");
+    	// Debug.Log("destroyed rock");
     	rb.velocity = Vector3.zero;
     	rb.angularVelocity = Vector3.zero;
     	rb.drag = 10;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 
@@ -91,7 +92,7 @@ public class MonsterAI : MonoBehaviour {
                     anim.SetBool("Chasing", false);
                     anim.SetBool("Attacking", true);
 
-                    Debug.Log("Delaying");
+                    // Debug.Log("Delaying");
                     new WaitForSeconds(5);
 
                     Debug.Log("Now attacking player!");
@@ -176,5 +177,18 @@ public class MonsterAI : MonoBehaviour {
     	float distance1 = (goMovingWP.transform.position - nM.transform.position).magnitude;
     	float lookAheadT = distance1 / nM.speed;
     	return (goMovingWP.transform.position + (lookAheadT * velocity.Velocity));
+    }
+
+    public void OnTriggerEnter(Collider collision) {
+        Debug.Log(collision);
+        if (collision.tag == "rock") {
+            timeElapsed = 0;
+            anim.SetBool("Chasing", false);
+            anim.SetBool("Patrolling", false);
+            anim.SetBool("Attacking", false);
+            anim.SetBool("Frozen", true);
+            aiState = AIState.frozen;
+            
+        }
     }
 }

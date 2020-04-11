@@ -18,7 +18,8 @@ public class TextAppear : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider collider) {
-        billboard.SetActive(true);
+        if (collider.tag != "rock")
+            billboard.SetActive(true);
     }
     public void OnTriggerExit(Collider collider) {
         billboard.SetActive(false);
