@@ -107,7 +107,6 @@
     <Compile Include="Assets\Throwing\scripts\RockPickup.cs" />
     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\Baker House\Readme.txt" />
-    <None Include="Assets\AllSkyFree\AllSkyFree_Readme.txt" />
     <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
     <None Include="Assets\HealthHeartSystem\readme.txt" />
     <None Include="Assets\Models\Key\readME keys.txt" />
