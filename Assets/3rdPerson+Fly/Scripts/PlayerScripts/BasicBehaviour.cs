@@ -89,7 +89,7 @@ public class BasicBehaviour : MonoBehaviour
 
 		//added by Jonathan Najjar
 		if(Input.GetAxisRaw("Aim") != 0) {
-		    	if(Input.GetButtonDown("Throw")){ //&& Can Trhow
+		    	if(Input.GetButtonDown("Fire1")){ //&& Can Trhow
 		    		anim.SetTrigger("Throw");
 		    	}
     	}

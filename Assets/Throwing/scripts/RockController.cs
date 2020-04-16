@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +19,7 @@ public class RockController : MonoBehaviour
     void Update()
     {
     	if(Input.GetAxisRaw("Aim") != 0) {
-		    	if(Input.GetButtonDown("Throw")){ //&& Can Trhow
+		    	if(Input.GetButtonDown("Fire1")){ //&& Can Trhow
 		    		// Debug.Log("rock thrown");
 		    		// item.GetComponent<MeshRenderer>().enabled = true;
 		    		// //item.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
