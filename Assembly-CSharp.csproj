@@ -74,6 +74,7 @@
     <Compile Include="Assets\Compass\Scripts\CompassActivator.cs" />
     <Compile Include="Assets\Compass\Scripts\CompassCollector.cs" />
     <Compile Include="Assets\Compass\Scripts\TargetMarkerController.cs" />
+    <Compile Include="Assets\Fantasy Forest Environment\Scripts\TexturePan.cs" />
     <Compile Include="Assets\Fruit Pack\Scripts\AppleActivator.cs" />
     <Compile Include="Assets\Fruit Pack\Scripts\AppleCollector.cs" />
     <Compile Include="Assets\Fruit Pack\Scripts\CollectableApple.cs" />
@@ -108,6 +109,8 @@
     <Compile Include="Assets\Throwing\scripts\RockPickup.cs" />
     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\Baker House\Readme.txt" />
+    <None Include="Assets\Fantasy Forest Environment\Shaders\VS_indirect.cginc" />
+    <None Include="Assets\Fantasy Forest Environment\Shaders\TreeWind.shader" />
     <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
     <None Include="Assets\HealthHeartSystem\readme.txt" />
     <None Include="Assets\Models\Key\readME keys.txt" />
