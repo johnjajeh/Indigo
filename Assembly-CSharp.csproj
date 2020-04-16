@@ -83,6 +83,7 @@
     <Compile Include="Assets\HealthHeartSystem\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\LoseMenuToggle.cs" />
     <Compile Include="Assets\Scripts\Apple.cs" />
+    <Compile Include="Assets\Scripts\Camera\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\DayNightCycle.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\GameStarter.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Assets\Throwing\scripts\RockController.cs" />
     <Compile Include="Assets\Throwing\scripts\RockMove.cs" />
     <Compile Include="Assets\Throwing\scripts\RockPickup.cs" />
+    <Compile Include="Assets\control\PlayerController.cs" />
     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\Baker House\Readme.txt" />
     <None Include="Assets\Fantasy Forest Environment\Shaders\VS_indirect.cginc" />
