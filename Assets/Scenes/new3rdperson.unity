@@ -2682,8 +2682,8 @@ MonoBehaviour:
   pivotOffset: {x: 0, y: 1, z: 0}
   camOffset: {x: 0, y: 0.5, z: -2}
   smooth: 10
-  horizontalAimingSpeed: 10
-  verticalAimingSpeed: 10
+  horizontalAimingSpeed: 7
+  verticalAimingSpeed: 7
   maxVerticalAngle: 30
   minVerticalAngle: -60
   XAxis: Analog X
