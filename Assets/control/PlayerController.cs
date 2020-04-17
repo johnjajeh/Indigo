@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
 	private Rigidbody rb;
 
+	public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    	//animations
+    	anim.SetFloat("vertical", Input.GetAxis("Vertical"));
+    	anim.SetFloat("horizontal", Input.GetAxis("Horizontal"));
+
+    	//movement
     	float moveAxis = Input.GetAxis(MoveInputAxis);
     	float turnAxis = Input.GetAxis(TurnInputAxis);
 
