@@ -108,9 +108,11 @@
     <Compile Include="Assets\Throwing\scripts\RockController.cs" />
     <Compile Include="Assets\Throwing\scripts\RockMove.cs" />
     <Compile Include="Assets\Throwing\scripts\RockPickup.cs" />
+    <Compile Include="Assets\control\AJInput.cs" />
     <Compile Include="Assets\control\CameraRig.cs" />
     <Compile Include="Assets\control\CameraRigEditor.cs" />
     <Compile Include="Assets\control\PlayerController.cs" />
+    <Compile Include="Assets\control\scripts\AJMovement.cs" />
     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
     <None Include="Assets\Baker House\Readme.txt" />
     <None Include="Assets\Fantasy Forest Environment\Shaders\VS_indirect.cginc" />
