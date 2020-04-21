@@ -2143,6 +2143,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
         type: 3}
+      propertyPath: targetTransforms.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
+        type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1443274412}
@@ -2160,6 +2165,26 @@ PrefabInstance:
         type: 3}
       propertyPath: maxMarkerTime
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
+        type: 3}
+      propertyPath: targetTransforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
+        type: 3}
+      propertyPath: targetTransforms.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
+        type: 3}
+      propertyPath: targetTransforms.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
+        type: 3}
+      propertyPath: targetTransforms.Array.data[3]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6859921543798003590, guid: efae674c2c6c5ed448c54c3f01bcb22a,
         type: 3}
@@ -5055,6 +5080,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1414289286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414289274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa30cf403d33c9643be2cf314dd7659a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasGateKey: 0
+  hasOpenedGate: 0
+  hasHouseKey: 0
 --- !u!1 &1440479855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5548293348276824872, guid: 9f9047760316ada4fa1225f7f02bc758,
