@@ -9,6 +9,7 @@ public class PlayerFootsteps : MonoBehaviour
     void Start()
     {
         footsteps = GetComponent<AudioSource>();
+        footsteps.volume = 0.1f;
     }
    
     public void TakeStep()
