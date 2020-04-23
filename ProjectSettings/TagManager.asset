@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Firepoint
   - rock
+  - Compass
+  - Apple
+  - Key
   layers:
   - Default
   - TransparentFX

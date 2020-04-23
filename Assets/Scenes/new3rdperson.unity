@@ -109,7 +109,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 49.6
+    agentSlope: 60
     agentClimb: 2
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -139,6 +139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -213,6 +218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -396,6 +406,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleProximity (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
+      objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,6 +496,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -857,6 +877,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key Proximity
       objectReference: {fileID: 0}
+    - target: {fileID: 1408946773096336822, guid: 99357d5e1e2104d1d9fdd50e517be05a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408946773096336824, guid: 99357d5e1e2104d1d9fdd50e517be05a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1408946773096336825, guid: 99357d5e1e2104d1d9fdd50e517be05a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -911,6 +941,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408946773676720095, guid: 99357d5e1e2104d1d9fdd50e517be05a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 6642336439079736073, guid: 99357d5e1e2104d1d9fdd50e517be05a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99357d5e1e2104d1d9fdd50e517be05a, type: 3}
@@ -1543,6 +1583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleProximity (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
+      objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1660,6 +1705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -1833,6 +1883,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8ad5d5a6b21775479c3c1e8cefa9198, type: 3}
+--- !u!4 &547146015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1408946773676388807, guid: 99357d5e1e2104d1d9fdd50e517be05a,
+    type: 3}
+  m_PrefabInstance: {fileID: 258916685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &563953996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2170,12 +2226,12 @@ PrefabInstance:
         type: 3}
       propertyPath: targetTransforms.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547146015}
     - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
         type: 3}
       propertyPath: targetTransforms.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1443274412}
     - target: {fileID: 6859921543556113334, guid: efae674c2c6c5ed448c54c3f01bcb22a,
         type: 3}
       propertyPath: targetTransforms.Array.data[2]
@@ -2744,6 +2800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompassProximity (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 126191081743933900, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 126191081743933903, guid: ae7f58cd3ae9b2846b509421286e0ed4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2808,6 +2869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.20000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 127191091165844282, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Compass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae7f58cd3ae9b2846b509421286e0ed4, type: 3}
@@ -3242,7 +3308,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9aaa9cc87fb3d143a9b6638a510a20e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.357
+  m_Volume: 0.317
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4112,6 +4178,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompassProximity (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 126191081743933900, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 126191081743933903, guid: ae7f58cd3ae9b2846b509421286e0ed4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4176,6 +4247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.20000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 127191091165844282, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Compass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae7f58cd3ae9b2846b509421286e0ed4, type: 3}
@@ -4276,6 +4352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -4518,6 +4599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompassProximity (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 126191081743933900, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 126191081743933903, guid: ae7f58cd3ae9b2846b509421286e0ed4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4582,6 +4668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.20000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 127191091165844282, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Compass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae7f58cd3ae9b2846b509421286e0ed4, type: 3}
@@ -5192,6 +5283,309 @@ MonoBehaviour:
   hasGateKey: 0
   hasOpenedGate: 0
   hasHouseKey: 0
+--- !u!82 &1414289287
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414289274}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2bda1fe3ef4dbd459834d598cf156ff, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.054
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1414289288
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414289274}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a82e451c4289a1f49bb47149087b8ba6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.116
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1414289289
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414289274}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b39ff755e4356ad4699c28795c7f0b85, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.14
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1414289290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414289274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ca39c69841d8640b7535b3fd5618d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keySound: {fileID: 1414289287}
+  compassSound: {fileID: 1414289288}
+  appleSound: {fileID: 1414289289}
 --- !u!1 &1440479855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5548293348276824872, guid: 9f9047760316ada4fa1225f7f02bc758,
@@ -5215,6 +5609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -5382,6 +5781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AppleProximity (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -6520,6 +6924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompassProximity (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 126191081743933900, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 126191081743933903, guid: ae7f58cd3ae9b2846b509421286e0ed4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6585,6 +6994,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.20000002
       objectReference: {fileID: 0}
+    - target: {fileID: 127191091165844282, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Compass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae7f58cd3ae9b2846b509421286e0ed4, type: 3}
 --- !u!4 &2129655373 stripped
@@ -6610,6 +7024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CompassProximity
+      objectReference: {fileID: 0}
+    - target: {fileID: 126191081743933900, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 126191081743933903, guid: ae7f58cd3ae9b2846b509421286e0ed4,
         type: 3}
@@ -6676,6 +7095,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.20000002
       objectReference: {fileID: 0}
+    - target: {fileID: 127191091165844282, guid: ae7f58cd3ae9b2846b509421286e0ed4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Compass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae7f58cd3ae9b2846b509421286e0ed4, type: 3}
 --- !u!1001 &897247226553722817
@@ -6685,10 +7109,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1259502099}
     m_Modifications:
+    - target: {fileID: 3334970186613373246, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
       propertyPath: m_Name
       value: AppleProximity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334970187042421321, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3334970187042421327, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}
@@ -6744,6 +7178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917087252439389623, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
+        type: 3}
+      propertyPath: m_TagString
+      value: Apple
       objectReference: {fileID: 0}
     - target: {fileID: 5929415156201425258, guid: a1c0ae6dfaee0ed42b57a53bbbd5f435,
         type: 3}

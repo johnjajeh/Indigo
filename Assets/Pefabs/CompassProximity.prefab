@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 126191081743933902}
   - component: {fileID: 126191081743933897}
   m_Layer: 0
-  m_Name: CompassProximity 1
-  m_TagString: Untagged
+  m_Name: CompassProximity
+  m_TagString: Compass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
