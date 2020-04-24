@@ -14,6 +14,7 @@ public class HintAppear : MonoBehaviour
             hints[i].SetActive(false);
         }
         hints[0].SetActive(true);
+        hints[1].SetActive(true);
     }
 
     // Update is called once per frame
@@ -23,12 +24,15 @@ public class HintAppear : MonoBehaviour
 
         if (timeSinceLastKeyPress >= 5) {
             hints[currentHint].SetActive(false);
+            hints[currentHint + 1].SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Q)) {
             hints[currentHint].SetActive(false);
-            currentHint = (currentHint+1) % hints.Length;
+            hints[currentHint+1].SetActive(false);
+            currentHint = (currentHint+2) % hints.Length;
             hints[currentHint].SetActive(true);
+            hints[currentHint+1].SetActive(true);
             timeSinceLastKeyPress = 0.0f;
         }
     }
