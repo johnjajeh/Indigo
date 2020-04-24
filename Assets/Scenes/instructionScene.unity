@@ -1530,7 +1530,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1508, y: 500}
+  m_SizeDelta: {x: 1508, y: 1200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1998100961
 MonoBehaviour:
@@ -1563,9 +1563,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You're a young boy trying to find his way home, but to get there...you
+  m_Text: "You're a young boy trying to find his way home, but to get there...you
     must venture through the MYSTIC FOREST. Avoid monsters and find the key to open
-    the gates and escape! Use apples and compasses to help you along the way.
+    the gates and escape! Use apples and compasses to help you along the way. \n\nCONTROLS:\nQ:
+    Display Hint\nSpacebar: Jump\nArrow Keys/WASD: Move\nMove Cursor: Move Camera\nRight
+    Click + Left Click: Aim + Throw Rock"
 --- !u!222 &1998100962
 CanvasRenderer:
   m_ObjectHideFlags: 0
