@@ -18,8 +18,8 @@ public class RockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	if(Input.GetAxisRaw("Aim") != 0) {
-		    	if(Input.GetButtonDown("Fire1")){ //&& Can Trhow
+    	
+		    	if(Input.GetButtonDown("Throw") && Input.GetButton("Aim")){ //&& Can Trhow
 		    		// Debug.Log("rock thrown");
 		    		// item.GetComponent<MeshRenderer>().enabled = true;
 		    		// //item.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
@@ -27,7 +27,7 @@ public class RockController : MonoBehaviour
 		    		// item.transform.parent = null;
 		    		newRock();
 		    	}
-    	}
+    	
 
         
     }
