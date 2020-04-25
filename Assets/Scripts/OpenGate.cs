@@ -11,6 +11,9 @@ public class OpenGate : MonoBehaviour
     public GameObject leftGate;
     private Animator leftGateAnim;
 
+    public AudioSource creak;
+
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider == null)
@@ -27,6 +30,8 @@ public class OpenGate : MonoBehaviour
             // Set both gates animation states to Activated
             rightGateAnim.SetBool("isActivated", true);
             leftGateAnim.SetBool("isActivated", true);
+
+            creak.Play();
         }
     }
 }

@@ -23,6 +23,8 @@ public class MonsterAI : MonoBehaviour {
 
     private int currWaypoint;
 
+    public AudioSource attackNoise;
+
     public enum AIState {
 		frozen, // let it go
         chasingPlayer,
@@ -56,29 +58,24 @@ public class MonsterAI : MonoBehaviour {
 
         switch(aiState) {
             case AIState.frozen:
-                // Debug.Log("Frozen!");
                 timeElapsed += Time.deltaTime;
                 if (timeElapsed >= 3) {
                     if (amICloseEnoughToEthanToChase()) {
                         anim.SetBool("Frozen", false);
                         anim.SetBool("Chasing", true);
 
-                        Debug.Log("Now chasing player again!");
                         aiState = AIState.chasingPlayer;
                     } else {
                         anim.SetBool("Frozen", false);
                         anim.SetBool("Patrolling", true);
 
-                        Debug.Log("Now patrolling again!");
                         aiState = AIState.patrolling;
                         setNextWaypoint();
                     }
                 }
                 break;        
             case AIState.chasingPlayer:
-                // Debug.Log("Chasing player!");
                 if (amITooFarAwayToChase()) {
-                    Debug.Log("I am too far away to chase!");
                     
                     anim.SetBool("Chasing", false);
                     anim.SetBool("Patrolling", true);
@@ -88,24 +85,17 @@ public class MonsterAI : MonoBehaviour {
                 setMovingWaypoint();
                 nM.speed = 3.0f;
                 if (amICloseEnoughToEthanToAttack()) {
-                    // setNextWaypoint();   
                     anim.SetBool("Chasing", false);
                     anim.SetBool("Attacking", true);
 
-                    // Debug.Log("Delaying");
                     new WaitForSeconds(5);
 
                     Debug.Log("Now attacking player!");
                     aiState = AIState.attackingPlayer;
-                    // anim.SetFloat("vely", nM.velocity.magnitude / nM.speed);
                 }
 
                 break;        
             case AIState.attackingPlayer:
-                // Debug.Log("Attacking player!");
-                // to do: implement actual attack
-
-                
                 // ethanScript.reduceHealth();
                 if (PlayerStatsObj != null) {
                     PlayerStatsObj.TakeDamage((float) 1);
@@ -115,13 +105,13 @@ public class MonsterAI : MonoBehaviour {
                 anim.SetBool("Attacking", false);
                 anim.SetBool("Frozen", true);
 
-                Debug.Log("Now frozen!");
+                attackNoise.Play();
+
                 aiState = AIState.frozen;
 
 
                 break;
             case AIState.patrolling:
-                // Debug.Log("I am patrolling to waypoint " + currWaypoint);
                 nM.speed = 2.0f;
                 
                 //If the enemy is at a waypoint
@@ -129,7 +119,6 @@ public class MonsterAI : MonoBehaviour {
                     //Check if the enemy if close enough to chase the player
                     if (amICloseEnoughToEthanToChase()) {
                         setMovingWaypoint();
-                        Debug.Log("Now chasing player!");
                         anim.SetBool("Patrolling", false);
                         anim.SetBool("Chasing", true);
                         aiState = AIState.chasingPlayer;
@@ -165,11 +154,6 @@ public class MonsterAI : MonoBehaviour {
     }
 
     private void setMovingWaypoint() {
-        // Debug.Log("Moving toward waypoint!");
-        // float distance0 = (goMovingWP.transform.position - nM.transform.position).magnitude;
-        // float lookAheadT = distance0 / nM.speed;
-        // Vector3 target = (goMovingWP.transform.position + (lookAheadT * velocity.Velocity));
-        // Debug.Log(target);
         nM.SetDestination(goMovingWP.transform.position);
     }
 
@@ -180,7 +164,6 @@ public class MonsterAI : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider collision) {
-        Debug.Log(collision);
         if (collision.tag == "rock") {
             timeElapsed = 0;
             anim.SetBool("Chasing", false);

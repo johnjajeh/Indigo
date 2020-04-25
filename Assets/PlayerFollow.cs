@@ -25,7 +25,6 @@ public class PlayerFollow : MonoBehaviour
         currentSpeed = curMove.magnitude / Time.deltaTime;
         previousPosition = transform.position;
 
-        Debug.Log(previousPosition);
 
         if (currentSpeed > 0) {
             anim.SetBool("Idle", false);

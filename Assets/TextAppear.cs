@@ -20,9 +20,10 @@ public class TextAppear : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider collider) {
-        if (collider.tag == "Player")
+        if (collider.tag == "Player") {
             billboard.SetActive(true);
             b2.SetActive(true);
+        }
     }
     public void OnTriggerExit(Collider collider) {
         billboard.SetActive(false);
