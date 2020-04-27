@@ -23,6 +23,9 @@ public class OpenGate : MonoBehaviour
 
         if (collider.CompareTag("Player") && Key.hasKey)
         {
+            TargetStatus ts = GameObject.FindGameObjectWithTag("Player").GetComponent<TargetStatus>();
+            ts.hasOpenedGate = true;
+
             // Get animator component of both gates
             rightGateAnim = rightGate.GetComponent<Animator>();
             leftGateAnim = leftGate.GetComponent<Animator>();

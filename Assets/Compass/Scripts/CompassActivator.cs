@@ -10,10 +10,10 @@ public class CompassActivator : MonoBehaviour
     void OnTriggerEnter(Collider c)
     {   
         // Check if compass has not been collected
-        if(c.attachedRigidbody) 
+        if(c.gameObject.tag == "Player") 
         {
             // Check if object in proximity to a compass can collect it
-            CompassCollector cc = c.attachedRigidbody.gameObject.GetComponent<CompassCollector>();
+            CompassCollector cc = c.gameObject.GetComponent<CompassCollector>();
             if (cc) 
             {
                 // Get animator component of the compass
@@ -26,10 +26,10 @@ public class CompassActivator : MonoBehaviour
 
     void OnTriggerExit(Collider c) 
     {
-        if(c.attachedRigidbody) 
+        if(c.gameObject.tag == "Player") 
         {
             // Check if object in proximity to a compass can collect it
-            CompassCollector cc = c.attachedRigidbody.gameObject.GetComponent<CompassCollector>();
+            CompassCollector cc = c.gameObject.GetComponent<CompassCollector>();
             if (cc) 
             {
                 // Set compass animation state to Idle

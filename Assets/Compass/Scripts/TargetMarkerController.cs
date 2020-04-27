@@ -21,12 +21,13 @@ public class TargetMarkerController : MonoBehaviour
     public float maxMarkerTime;                 // Amount of time marker is visible after compass is collected
     
     // --- Compass Target --- //
-    [Tooltip("TRANSFORMS ORDER: gate key, gate, house key, house")]
+    [Tooltip("TRANSFORMS ORDER: gate key, gate, house")]
     public Transform[] targetTransforms;        // Transforms for target objects IN ORDER THEY SHOULD BE COLLECTED
-    private const int GATE_KEY = 0, GATE = 1, HOUSE_KEY = 2, HOUSE = 3;             // Indices of targetTransforms
+    private const int GATE_KEY = 0, GATE = 1, HOUSE = 2;             // Indices of targetTransforms
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         hud.enabled = false;
         marker = GetComponent<Image>();
         distText = GetComponentInChildren<Text>();
@@ -54,13 +55,10 @@ public class TargetMarkerController : MonoBehaviour
             // Debug.Log("has compass: " + cc.hasCompass);
             // Debug.Log("HUD enabled: " + hud.enabled);
 
-            // Set marker for next target: gate key --> gate --> house key --> house
-            if (targetStatus.hasHouseKey == true) {
+            // Set marker for next target: gate key --> gate --> house
+            if (targetStatus.hasOpenedGate == true) {
                 // Display marker for house
                 DisplayMarker(targetTransforms[HOUSE]);
-            } else if (targetStatus.hasOpenedGate == true) {
-                // Display marker for house key
-                DisplayMarker(targetTransforms[HOUSE_KEY]);
             } else if (targetStatus.hasGateKey == true) {
                 // Display marker for gate
                 DisplayMarker(targetTransforms[GATE]);

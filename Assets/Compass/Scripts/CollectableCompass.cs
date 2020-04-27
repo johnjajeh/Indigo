@@ -6,10 +6,10 @@ public class CollectableCompass : MonoBehaviour
 {
     void OnTriggerEnter(Collider c) 
     {
-        if(c.attachedRigidbody) 
+        if(c.gameObject.tag == "Player") 
         {
             // Check if object entering trigger can collect a compass
-            CompassCollector cc = c.attachedRigidbody.gameObject.GetComponent<CompassCollector>();
+            CompassCollector cc = c.gameObject.GetComponent<CompassCollector>();
             if (cc) 
             {
                 cc.hasCompass = true;

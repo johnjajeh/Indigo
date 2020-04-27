@@ -10,7 +10,8 @@ public class Key : MonoBehaviour
         if(collider.gameObject.tag == "Player") {
             Debug.Log("Key pickup");
             hasKey = true;
-
+            TargetStatus ts = GameObject.FindGameObjectWithTag("Player").GetComponent<TargetStatus>();
+            ts.hasGateKey = true;
             Destroy(gameObject);
         }
     }

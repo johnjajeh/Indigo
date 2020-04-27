@@ -10,10 +10,10 @@ public class AppleActivator : MonoBehaviour
     void OnTriggerEnter(Collider c)
     {   
         // Check if apple has not been collected
-        if(c.attachedRigidbody) 
+        if(c.gameObject.tag == "Player") 
         {
             // Check if object in proximity to an apple can collect it
-            AppleCollector ac = c.attachedRigidbody.gameObject.GetComponent<AppleCollector>();
+            AppleCollector ac = c.gameObject.GetComponent<AppleCollector>();
             if (ac) 
             {
                 // Get animator component of the apple
@@ -26,10 +26,10 @@ public class AppleActivator : MonoBehaviour
 
     void OnTriggerExit(Collider c) 
     {
-        if(c.attachedRigidbody) 
+        if(c.gameObject.tag == "Player") 
         {
             // Check if object in proximity to an apple can collect it
-            AppleCollector ac = c.attachedRigidbody.gameObject.GetComponent<AppleCollector>();
+            AppleCollector ac = c.gameObject.GetComponent<AppleCollector>();
             if (ac) 
             {
                 // Set compass animation state to Idle
