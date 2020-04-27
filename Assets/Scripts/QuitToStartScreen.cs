@@ -7,6 +7,7 @@ public class QuitToStartScreen : MonoBehaviour
 {
     public void QuitGameToStart()
     {
+        WinMarker.winEntered = false;
         SceneManager.LoadScene("startScreen");
     }
 }
