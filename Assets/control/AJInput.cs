@@ -11,6 +11,7 @@ public class AJInput : MonoBehaviour
 		public string verticalAxis = "Vertical";
 		public string horizontalAxis = "Horizontal";
 		public string jumpButton = "Jump";
+		public string aimButton = "Aim";
 	}
 	[SerializeField]
 	InputSettings input;
@@ -42,6 +43,15 @@ public class AJInput : MonoBehaviour
 
         	if(Input.GetButtonDown("Jump")) {
         		characterMove.Jump();
+        	}
+
+        	if(Input.GetButton(input.aimButton)) {
+        		characterMove.Aim();
+        		if(Input.GetButtonDown("Throw")) {
+        			characterMove.Launch();
+        		}
+        	} else {
+        		characterMove.StopAim();
         	}
         }
 

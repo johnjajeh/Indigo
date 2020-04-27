@@ -15,6 +15,7 @@ public class AJMovement : MonoBehaviour
 		public string horizontalVelocityFloat = "Strafe";
 		public string groundedBool = "isGrounded";
 		public string jumpBool = "isJumping";
+		public string aimBool = "isAiming";
 
 
 	}
@@ -44,11 +45,18 @@ public class AJMovement : MonoBehaviour
 	bool resetGravity;
 	float gravity;
 	bool isGrounded = true;
+	bool aiming;
 
+	GameObject crosshair;
+	GameObject rockhand;
 
     // Start is called before the first frame update
     void Start()
     {
+    	crosshair = GameObject.FindWithTag("crosshair");
+    	crosshair.SetActive(false);
+    	rockhand = GameObject.FindWithTag("rockhand");
+    	rockhand.SetActive(false);
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         SetupAnimator();
@@ -73,6 +81,7 @@ public class AJMovement : MonoBehaviour
     	animator.SetFloat(animations.horizontalVelocityFloat, strafe);
     	animator.SetBool(animations.groundedBool, isGrounded);
     	animator.SetBool(animations.jumpBool, jumping);
+    	animator.SetBool(animations.aimBool, aiming);
     }
 
     public void Jump() {
@@ -84,6 +93,23 @@ public class AJMovement : MonoBehaviour
     		jumping = true;
     		StartCoroutine(StopJump());
     	}
+    }
+
+
+    public void Launch() {
+    	animator.SetTrigger("launch");
+    }
+    public void Aim() {
+    	Debug.Log("cross hair" + GameObject.FindWithTag("crosshair"));
+    	crosshair.SetActive(true);
+    	rockhand.SetActive(true);
+    	aiming = true;
+    }
+
+    public void StopAim() {
+    	crosshair.SetActive(false);
+    	rockhand.SetActive(false);
+    	aiming = false;
     }
 
     IEnumerator StopJump() {

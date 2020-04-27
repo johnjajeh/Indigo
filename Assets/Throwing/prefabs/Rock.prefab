@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 4
-  throwForce: 1000
+  throwForce: 200
 --- !u!54 &-4317478823869336084
 Rigidbody:
   m_ObjectHideFlags: 0
