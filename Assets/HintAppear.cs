@@ -27,7 +27,7 @@ public class HintAppear : MonoBehaviour
             hints[currentHint + 1].SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q)) {
+        if (Input.GetButtonDown("Interact")) {
             hints[currentHint].SetActive(false);
             hints[currentHint+1].SetActive(false);
             currentHint = (currentHint+2) % hints.Length;
