@@ -136,16 +136,14 @@ public class CameraRig : MonoBehaviour
     		return;
     	}
 
-    	Debug.Log("Mouse x " + cameraSettings.mouseXSensitivity);
-    	Debug.Log("Mouse y " + cameraSettings.mouseYSensitivity);
-    	Debug.Log("Mouse vert pos " + Input.GetAxis(input.verticalAxis));
-    	Debug.Log("Mouse horz pos " + Input.GetAxis(input.horizontalAxis));
+
     	newX += cameraSettings.mouseXSensitivity * Input.GetAxis(input.verticalAxis);
     	newY += cameraSettings.mouseYSensitivity * Input.GetAxis(input.horizontalAxis);
 
     	Vector3 eurlerAngleAxis = new Vector3();
     	eurlerAngleAxis.x = newY;
     	eurlerAngleAxis.y = newX;
+
 
     	newX = Mathf.Repeat(newX, 360); //prevents camera bouncing
     	newY = Mathf.Clamp(newY, cameraSettings.minAngle, cameraSettings.maxAngle);

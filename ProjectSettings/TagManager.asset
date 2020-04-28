@@ -10,6 +10,8 @@ TagManager:
   - Compass
   - Apple
   - Key
+  - crosshair
+  - rockhand
   layers:
   - Default
   - TransparentFX
@@ -42,7 +44,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - HLOD
   m_SortingLayers:
   - name: Default
     uniqueID: 0
