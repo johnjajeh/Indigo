@@ -55,13 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\LevelScripts\ThirdPersonOrbitCamBasic.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\AimBehaviourBasic.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\BasicBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\FlyBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\MoveBehaviour.cs" />
-     <Compile Include="Assets\3rdPerson+Fly\Scripts\PlayerScripts\PlayerFootsteps.cs" />
-     <Compile Include="Assets\AimBehaviour.cs" />
      <Compile Include="Assets\AudioScript.cs" />
      <Compile Include="Assets\Compass\Scripts\CollectableCompass.cs" />
      <Compile Include="Assets\Compass\Scripts\CompassActivator.cs" />
@@ -128,6 +121,7 @@
      <Compile Include="Assets\NVJOB Water Shader SAF\Water Shader\Water.cs" />
      <Compile Include="Assets\NVJOB Water Shader SAF\Water Shader\WindZoneRot.cs" />
      <Compile Include="Assets\PlayerFollow.cs" />
+     <Compile Include="Assets\PlayerFootsteps.cs" />
      <Compile Include="Assets\Scripts\Apple.cs" />
      <Compile Include="Assets\Scripts\Camera\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Scripts\DayNightCycle.cs" />
