@@ -64,9 +64,6 @@
      <Compile Include="Assets\Fruit Pack\Scripts\AppleActivator.cs" />
      <Compile Include="Assets\Fruit Pack\Scripts\AppleCollector.cs" />
      <Compile Include="Assets\Fruit Pack\Scripts\CollectableApple.cs" />
-     <Compile Include="Assets\HealthHeartSystem\Scripts\HealthBarController.cs" />
-     <Compile Include="Assets\HealthHeartSystem\Scripts\HealthBarHUDTester.cs" />
-     <Compile Include="Assets\HealthHeartSystem\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\HintAppear.cs" />
      <Compile Include="Assets\LoseMenuToggle.cs" />
      <Compile Include="Assets\NVJOB Water Shader SAF\Example Scenes\Dynamic Sky Lite\DynamicSkyLite.cs" />
@@ -129,12 +126,15 @@
      <Compile Include="Assets\Scripts\GameStarter.cs" />
      <Compile Include="Assets\Scripts\GamerQuitter.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\HealthBarController.cs" />
+     <Compile Include="Assets\Scripts\HealthBarHUDTester.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
      <Compile Include="Assets\Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\MonsterAI.cs" />
      <Compile Include="Assets\Scripts\OpenGate.cs" />
      <Compile Include="Assets\Scripts\PauseMenuToggle.cs" />
      <Compile Include="Assets\Scripts\PlayGameAgain.cs" />
+     <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\QuitToStartScreen.cs" />
      <Compile Include="Assets\Scripts\ResumeGame.cs" />
      <Compile Include="Assets\Scripts\SceneStart.cs" />
@@ -184,7 +184,6 @@
      <None Include="Assets\Fantasy Forest Environment\Shaders\TreeWind.shader" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
      <None Include="Assets\NVJOB Water Shader SAF\Example Scenes\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
-     <None Include="Assets\HealthHeartSystem\readme.txt" />
      <None Include="Assets\NVJOB Water Shader SAF\Example Scenes\PostProcessing\Resources\Shaders\ACES.cginc" />
      <None Include="Assets\NVJOB Water Shader SAF\Example Scenes\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\NVJOB Water Shader SAF\Example Scenes\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
